@@ -49,7 +49,8 @@ router.post('/logout', isAutenticated, httpHandler(async (req, res) => {
 }))
 
 router.get('/test',httpHandler(async(req,res)=>{
-      res.send('hello test')
+    const collect = await authService.testUser()
+      res.send(collect)
 }))
 
 export default router;

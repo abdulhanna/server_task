@@ -37,9 +37,17 @@ const findAllUsers = async()=>{
 }
 
 
+const testUser = async()=>{
+     return {
+        name:'abdul',
+        role:'admin'
+     }
+}
+
 const authService = {
     doRegister,
-    findAllUsers
+    findAllUsers,
+    testUser
     // login,
 }
 
