@@ -1,5 +1,6 @@
 import http from 'http'
 import { createApp,useModules,finishApp } from './app';
+import '@babel/polyfill';
 
 
 
