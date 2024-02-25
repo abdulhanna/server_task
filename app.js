@@ -32,8 +32,10 @@ export const createApp = () => {
         saveUninitialized: false,
         cookie: {
             // domain: 'goal2.dev.client.kloudlite.io',
+            domain:'client-task-lyart.vercel.app',
+        
             // domain:"amazing7studios.com",
-            // httpOnly: true,
+            httpOnly: true,
             secure: false,
             // sameSite: "strict",
             path: "/",
@@ -53,6 +55,8 @@ export const createApp = () => {
         cors({
             origin: [
                 "http://localhost:3000",
+                'https://client-task-lyart.vercel.app',
+                "https://client-task-abdul-hannans-projects-042ba562.vercel.app"
 
             ],
             credentials: true,
