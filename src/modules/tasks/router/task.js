@@ -2,7 +2,7 @@ import { Router } from "express";
 import { httpHandler } from '@madhouselabs/http-helpers';
 import taskService from "../services/task";
 import { isAutenticated } from "../../auth/services/passportConfig";
-
+import { taskModel } from "../model";
 const router = Router()
 
 
@@ -81,6 +81,12 @@ router.post('/search', httpHandler(async (req, res) => {
         //  res.send('hello')
     }))
 
+     router.get('/taskList',httpHandler(async(req,res)=>{
+         
+       const result = await taskModel.find({})
+       res.send(result)
+
+     }))
     router.get('/pagination',httpHandler(async(req,res)=>{
         const { page = 1, limit = 10 ,status="",priority=""} = req.query; // Get page and limit query parameters from request
         const query = {page,limit,status,priority}
