@@ -32,10 +32,10 @@ export const createApp = () => {
         saveUninitialized: false,
         cookie: {
             // domain: 'goal2.dev.client.kloudlite.io',
-            domain:'client-task-lyart.vercel.app',
+            // domain:'client-task-lyart.vercel.app',
         
             // domain:"amazing7studios.com",
-            httpOnly: true,
+            // httpOnly: true,
             secure: false,
             // sameSite: "strict",
             path: "/",
